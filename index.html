@@ -108,6 +108,7 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyP3dM6ghd7UIaIA305i3OGOy10LdVoe2QNiTWnAj-vlmV9nbpkiKTsbt3AaVvlHefATg/exec'
 const form = document.forms['google-sheet'] 
 const myButton = document.getElementById('admission');
+let myName;
 
 // Check if the button should be hidden
 if (localStorage.getItem('hideButton') === 'true') {
