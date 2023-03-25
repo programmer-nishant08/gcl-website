@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+
+    <title>Gajannan Computer Lab - Home Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Gajannan Computer Lab</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="details.html">Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Education</a>
+              </li>
+
+              <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="admission" >Take Admission</a>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Gajannan Computer Lab Admission Form</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3" name="google-sheet" method="POST">
+                            <div class="col-md-6">
+                              <label for="Name" class="form-label">Name</label>
+                              <input type="text" class="form-control" name="Name" id="name" onchange="handleOnchange()" required>
+                            </div>
+                            <div class="col-md-6">
+                              <label for="Guardians-Name" class="form-label">Guardians-Name</label>
+                              <input type="text" class="form-control" name="Guardians-Name" required>
+                            </div>
+                            <div class="col-12">
+                              <label for="Mobile-No" class="form-label">Mobile No</label>
+                              <input type="number" class="form-control" name="Mobile-No" required>
+                            </div>
+                            <div class="col-12">
+                              <label for="Address" class="form-label">Address</label>
+                              <input type="text" class="form-control" name="Address" required>
+                            </div>
+                            <div class="col-md-6">
+                              <label for="Qualification" class="form-label">Qualification</label>
+                              <input type="text" class="form-control" name="Qualification" required>
+                            </div>
+                        
+                            <div class="col-md-6">
+                                <label for="Aadhar-No" class="form-label">Aadhar no</label>
+                                <input type="text" class="form-control" name="Aadhar-No" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="E-mail" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" name="E-mail" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="Password" class="form-label">Password</label>
+                                <input type="text" class="form-control" name="Password" required>
+                              </div>       
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-success"  onclick="handleSubmit()">Submit(click once)</button>
+                    </ul>
+           <!-- Button trigger modal -->
+        </div>
+      </div>
+    </div>
+  </div>
+      </div> 
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+          <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+      </div> -->
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 class="display-5 fw-normal">Welcome To Gajannan Computer Lab</h1>
+          <p class="lead fw-normal">Learn About Computer Basic To Advance. <br>The computer was born to solve problems that did not exist before. Computer science empowers students to create the world of tomorrow. Computer science is the operating system for all innovation. Computer science is no more about computers than astronomy is about telescopes.</p>         
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>  
+      </div>
+              <!-- Modal -->              
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyP3dM6ghd7UIaIA305i3OGOy10LdVoe2QNiTWnAj-vlmV9nbpkiKTsbt3AaVvlHefATg/exec'
+const form = document.forms['google-sheet'] 
+const myButton = document.getElementById('admission');
+
+// Check if the button should be hidden
+if (localStorage.getItem('hideButton') === 'true') {
+  myButton.style.display = 'none';
+}
+
+// Add event listener to hide the button and store state in localStorage
+myButton.addEventListener('click', function() {
+  myButton.style.display = 'none';
+  localStorage.setItem('hideButton', 'true');
+});
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank you! you are admitted to Gajannan Computer Lab.."))
+                .catch(error => console.error('Error!', error.message))
+            })
+            function handleSubmit(){
+              console.log("button clicked")
+            }
+
+            function handleOnchange() {
+                let myValue = document.getElementById("name").value;
+                console.log(myValue)
+            }
+</script>
+  </body>
+</html>
